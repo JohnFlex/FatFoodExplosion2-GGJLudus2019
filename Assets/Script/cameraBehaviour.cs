@@ -9,16 +9,10 @@ public class cameraBehaviour : MonoBehaviour
     public float lerpSpeed;
     public Vector3 offsetPos;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(persoPos);
+        //Debug.Log("persoPos = " + persoPos);
         //Debug.Log(camPos);
         cameraMove(persoPos);
         camPos = transform.position;
@@ -33,8 +27,8 @@ public class cameraBehaviour : MonoBehaviour
     private void cameraMove(Vector3 trackingPos)
     {
         Vector3 prevPos = camPos;
-        Vector3 newPos = Vector3.Lerp(prevPos, trackingPos, lerpSpeed * Time.deltaTime);
+        Vector3 newPos = Vector3.Lerp(prevPos, trackingPos + offsetPos, lerpSpeed * Time.deltaTime);
         camPos = newPos;
-        transform.position = camPos + offsetPos;
+        transform.position = camPos;
      }
 }
