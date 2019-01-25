@@ -8,6 +8,7 @@ public class cameraBehaviour : MonoBehaviour
     private Vector3 camPos;
     public float lerpSpeed;
     public Vector3 offsetPos;
+    public GameObject ObjectToFollow;
 
     // Update is called once per frame
     void Update()
@@ -16,7 +17,7 @@ public class cameraBehaviour : MonoBehaviour
         //Debug.Log(camPos);
         cameraMove(persoPos);
         camPos = transform.position;
-        persoPos = transform.parent.transform.position;
+        persoPos = ObjectToFollow.transform.position;
     }
 
     /**
