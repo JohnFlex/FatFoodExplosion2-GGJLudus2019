@@ -61,17 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\cameraBehaviour.cs" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Compile Include="Assets\Script\Move.cs" />
-=======
+    <Compile Include="Assets\Script\Carotte.cs" />
     <Compile Include="Assets\Script\charBehaviour.cs" />
-    <Compile Include="Assets\Script\UIScript.cs" />
->>>>>>> charBehaviour
-=======
     <Compile Include="Assets\Script\collectibleBehaviour.cs" />
     <Compile Include="Assets\Script\FoodMover.cs" />
->>>>>>> MovingEnnemies
+    <Compile Include="Assets\Script\Move.cs" />
+    <Compile Include="Assets\Script\UIScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/marce/Documents/Projets Unity/GGJLudus2019/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
