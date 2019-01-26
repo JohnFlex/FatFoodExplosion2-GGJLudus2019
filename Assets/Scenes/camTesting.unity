@@ -289,6 +289,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1 &816747583
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,22 +390,18 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &1716480549
+=======
+--- !u!4 &1716480549 stripped
+>>>>>>> charBehaviour
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4609208159982025424}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1716480546}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07584548, y: -0.03055678, z: -10.001497}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 391773502}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1716480550
-MonoBehaviour:
+--- !u!1001 &4609208159982025424
+PrefabInstance:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -417,3 +414,76 @@ MonoBehaviour:
   lerpSpeed: 10
   offsetPos: {x: 0, y: 0, z: -10}
   ObjectToFollow: {fileID: 816747583}
+=======
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 391773502}
+    m_Modifications:
+    - target: {fileID: 4609208161495159026, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_Name
+      value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07584548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03055678
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.001497
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159029, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609208161495159030, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d,
+        type: 3}
+      propertyPath: lerpSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9aeccdd54413a2a49bfa6a36f7e2df8d, type: 3}
+>>>>>>> charBehaviour
