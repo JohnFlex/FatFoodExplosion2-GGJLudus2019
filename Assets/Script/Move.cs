@@ -21,10 +21,15 @@ public class Move : MonoBehaviour
         //Changing the position on changing axes
         this.transform.position =(this.transform.position) + (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0) * speed * Time.deltaTime);
         //Changing the position of the object
-        if (Input.GetAxis("Horizontal") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.right;
-        if (Input.GetAxis("Horizontal") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.left;
-        if (Input.GetAxis("Vertical") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.up;
-        if (Input.GetAxis("Vertical") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.down;
+        if (Input.GetAxis("Horizontal") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.right*2;
+        if (Input.GetAxis("Horizontal") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.left * 2;
+        if (Input.GetAxis("Vertical") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.up * 2;
+        if (Input.GetAxis("Vertical") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.down * 2;
         if ((Input.GetAxis("Vertical") == 0) && (Input.GetAxis("Horizontal") == 0)) ObjectToChangePosition.transform.localPosition = Vector3.zero;
+    }
+
+    public void setSpeed(float sped)
+    {
+        speed = sped;
     }
 }
