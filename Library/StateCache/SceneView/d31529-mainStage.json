@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-1.6771507263183594,"y":1.2171984910964966,"z":0.1144012063741684},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":10.531169891357422,"orthographic":true}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":483.7716064453125,"y":225.67559814453126,"z":-7.75},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":795.23681640625,"orthographic":true}
 >>>>>>> charBehaviour
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":5.33661413192749,"y":15.167323112487793,"z":-0.4296875},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":47.43002700805664,"orthographic":true}
+>>>>>>> MovingEnnemies
