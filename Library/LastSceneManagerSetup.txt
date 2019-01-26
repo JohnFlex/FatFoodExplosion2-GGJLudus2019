@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/persoBehaviour.unity
-=======
-- path: Assets/Scenes/test food moving.unity
->>>>>>> MovingEnnemies
+- path: Assets/Scenes/prototypeOne.unity
   isLoaded: 1
   isActive: 1

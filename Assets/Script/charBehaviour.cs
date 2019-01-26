@@ -6,24 +6,42 @@ using UnityEngine.UI;
 public class charBehaviour : MonoBehaviour
 {
     //vitesse du personnage par default
-    private float speed;
-    public float initSpeed;
+    public float speed;
+    //public float initSpeed;
     //tag des éléments bouf à détecter
     public string tagToDetect;
     //score du joueur sous forme de poid
-    private float poid;
+    private int _poid;
+    public int poid
+    {
+        get
+        {
+            return _poid;
+        }
+        set
+        {
+            if (value < 0)
+            {
+                _poid = 0;
+            }
+            else _poid = value;
+        }
+    }
+
     //représentation du poid dans l'ui
     public Text uiPoid;
+    public Move moveScript;
 
     void Start()
     {
-        speed = initSpeed;
+        /*moveScript = GetComponent<Move>();
+        speed = moveScript.speed;*/
     }
 
     void Update()
     {
         //le perso bouge vers le haut
-        transform.position += Vector3.up * Time.deltaTime * speed;
+        //transform.position += Vector3.up * Time.deltaTime * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,15 +49,17 @@ public class charBehaviour : MonoBehaviour
         //si l'objet détecté a le bon tag
         if(collision.gameObject.tag == tagToDetect)
         {
-            Destroy(collision.gameObject);
             poid++;
             uiPoid.text = poid.ToString();
-
+            
             if (speed > 1)
             {
                 speed -= speed * (poid * 2) / 100;
+                moveScript.setSpeed(speed);
             }
-            else speed = 1;
+            else moveScript.setSpeed(1);
+
+            Destroy(collision.gameObject);
         }
     }
 }
