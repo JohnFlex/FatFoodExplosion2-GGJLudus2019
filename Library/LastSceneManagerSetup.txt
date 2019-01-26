@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/prototypeOne.unity
+=======
+- path: Assets/Scenes/TempTestCarotte.unity
+>>>>>>> Carotte
   isLoaded: 1
   isActive: 1
