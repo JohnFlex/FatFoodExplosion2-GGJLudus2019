@@ -14,6 +14,12 @@ public class Move : MonoBehaviour
     public float speed = 100f;
     //Object that changes position depending on input
     public GameObject ObjectToChangePosition;
+    
+
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
@@ -26,6 +32,8 @@ public class Move : MonoBehaviour
         if (Input.GetAxis("Vertical") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.up * 2;
         if (Input.GetAxis("Vertical") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.down * 2;
         if ((Input.GetAxis("Vertical") == 0) && (Input.GetAxis("Horizontal") == 0)) ObjectToChangePosition.transform.localPosition = Vector3.zero;
+
+        
     }
 
     public void setSpeed(float sped)

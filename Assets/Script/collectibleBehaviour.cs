@@ -22,15 +22,25 @@ public class collectibleBehaviour : MonoBehaviour
     private GameObject player;
     //indique si la bouffe a courru ou pas
     private bool hasRun = false;
+    private Animator animator;
+
+    private Vector3 nowPos;
+    private Vector3 prevPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        CircleCollider2D dangerDetector = GetComponent<CircleCollider2D>();
-        dangerDetector.radius = dangerDetectionSize;
+        /*BoxCollider2D dangerDetector = GetComponent<BoxCollider2D>();
+        dangerDetector.radius = dangerDetectionSize;*/
         randomDirection = Vector3.zero;
         walkingFreely();
         player = GameObject.FindGameObjectWithTag("Player");
+        animator = GetComponent<Animator>();
+        //animator.Play("walk_fraise_back");
+
+        nowPos = transform.position;
+        prevPos = nowPos;
+        animator.Play("walk_fraise_face");
     }
 
     // Update is called once per frame
@@ -63,6 +73,36 @@ public class collectibleBehaviour : MonoBehaviour
         }
 
         else transform.position += randomDirection * speed * Time.deltaTime;
+
+        nowPos = transform.position;
+        float TempHor = prevPos.x - nowPos.x;
+        float TempVer = prevPos.y - nowPos.y;
+
+        if(TempHor < 0 || TempHor > 0)
+        {
+            animator.SetBool("isProfil", true);
+            animator.SetBool("isBack", false);
+            animator.SetBool("isFace", false);
+        }
+
+
+
+        if (((TempHor > 0 && TempHor < 0.1f) || (TempHor < 0 && TempHor > -0.1f)) && TempVer > 0)
+        {
+            animator.SetBool("isFace", true);
+            animator.SetBool("isBack", false);
+            animator.SetBool("isProfil", false);
+        }
+
+        if (((TempHor > 0 && TempHor < 0.1f) || (TempHor < 0 && TempHor > -0.1f)) && TempVer < 0)
+        {
+            animator.SetBool("isFace", false);
+            animator.SetBool("isBack", true);
+            animator.SetBool("isProfil", false);
+        }
+
+
+        prevPos = nowPos;
     }
 
     private void OnCollisionEnter2D(Collision2D other)

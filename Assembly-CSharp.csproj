@@ -61,10 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\cameraBehaviour.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\Script\Carotte.cs" />
->>>>>>> Carotte
     <Compile Include="Assets\Script\charBehaviour.cs" />
     <Compile Include="Assets\Script\collectibleBehaviour.cs" />
     <Compile Include="Assets\Script\FoodMover.cs" />
