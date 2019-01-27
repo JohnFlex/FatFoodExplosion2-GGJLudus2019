@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/prototypeOne.unity
+=======
+- path: Assets/Scenes/map.unity
+>>>>>>> level1
   isLoaded: 1
   isActive: 1
