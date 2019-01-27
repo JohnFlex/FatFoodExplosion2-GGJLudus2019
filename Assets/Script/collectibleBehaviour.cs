@@ -40,7 +40,7 @@ public class collectibleBehaviour : MonoBehaviour
 
         nowPos = transform.position;
         prevPos = nowPos;
-        animator.Play("walk_fraise_face");
+        //animator.Play("walk_fraise_face");
     }
 
     // Update is called once per frame
@@ -77,13 +77,13 @@ public class collectibleBehaviour : MonoBehaviour
         nowPos = transform.position;
         float TempHor = prevPos.x - nowPos.x;
         float TempVer = prevPos.y - nowPos.y;
-
+        /*
         if(TempHor < 0 || TempHor > 0)
         {
             animator.SetBool("isProfil", true);
             animator.SetBool("isBack", false);
             animator.SetBool("isFace", false);
-        }
+        }*/
 
 
 
@@ -91,14 +91,12 @@ public class collectibleBehaviour : MonoBehaviour
         {
             animator.SetBool("isFace", true);
             animator.SetBool("isBack", false);
-            animator.SetBool("isProfil", false);
         }
 
         if (((TempHor > 0 && TempHor < 0.1f) || (TempHor < 0 && TempHor > -0.1f)) && TempVer < 0)
         {
             animator.SetBool("isFace", false);
             animator.SetBool("isBack", true);
-            animator.SetBool("isProfil", false);
         }
 
 
