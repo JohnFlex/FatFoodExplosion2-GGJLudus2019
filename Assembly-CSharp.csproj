@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\collectibleBehaviour.cs" />
     <Compile Include="Assets\Script\Dash.cs" />
     <Compile Include="Assets\Script\FoodMover.cs" />
+    <Compile Include="Assets\Script\MonsterSpawner.cs" />
     <Compile Include="Assets\Script\Move.cs" />
     <Compile Include="Assets\Script\UIScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
