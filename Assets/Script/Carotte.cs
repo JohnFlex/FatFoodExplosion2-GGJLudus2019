@@ -12,6 +12,9 @@ public class Carotte : MonoBehaviour
     private float DistanceExpl = 2f;
     private Vector3 RunTo;
     private bool HasExploded = false;
+    private Animator animator;
+    private Vector3 prevPos;
+    private Vector3 nowPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +27,32 @@ public class Carotte : MonoBehaviour
     {
         if (!HasExploded)
         {
-            transform.LookAt(Joueur.transform);
+            //transform.LookAt(Joueur.transform);
             if (Run)
             {
                 transform.position = Vector3.MoveTowards(transform.position, RunTo, speed * Time.deltaTime);
             }
             if (Vector3.Distance(Joueur.transform.position, transform.position) < DistanceExpl) Explosion();
-        }  
+        }
+
+        nowPos = transform.position;
+        float TempHor = prevPos.x - nowPos.x;
+        float TempVer = prevPos.y - nowPos.y;
+        
+        if (((TempHor > 0 && TempHor < 0.1f) || (TempHor < 0 && TempHor > -0.1f)) && TempVer > 0)
+        {
+            animator.SetBool("isFace", true);
+            animator.SetBool("isBack", false);
+        }
+
+        if (((TempHor > 0 && TempHor < 0.1f) || (TempHor < 0 && TempHor > -0.1f)) && TempVer < 0)
+        {
+            animator.SetBool("isFace", false);
+            animator.SetBool("isBack", true);
+        }
+
+
+        prevPos = nowPos;
     }
 
     void WatchUntilExplosion()

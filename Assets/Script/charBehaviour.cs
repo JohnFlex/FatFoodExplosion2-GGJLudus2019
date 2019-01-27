@@ -29,13 +29,15 @@ public class charBehaviour : MonoBehaviour
     }
 
     //représentation du poid dans l'ui
-    public Text uiPoid;
+    //public Text uiPoid;
     public Move moveScript;
+    private Animator animator;
 
     void Start()
     {
         /*moveScript = GetComponent<Move>();
         speed = moveScript.speed;*/
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -47,14 +49,35 @@ public class charBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //si l'objet détecté a le bon tag
-        if(collision.gameObject.tag == tagToDetect)
+        if(collision.gameObject.tag == "bouf")
         {
             poid++;
-            uiPoid.text = poid.ToString();
-            
+            //uiPoid.text = poid.ToString();
+
+            if(poid > 10)
+            {
+                animator.SetBool("isThin", false);
+                animator.SetBool("isFat", false);
+                animator.SetBool("isNormal", true);
+            }
+
+            if (poid > 25)
+            {
+                animator.SetBool("isThin", false);
+                animator.SetBool("isFat", true);
+                animator.SetBool("isNormal", false);
+            }
+
+            if (poid <= 10)
+            {
+                animator.SetBool("isThin", true);
+                animator.SetBool("isFat", false);
+                animator.SetBool("isNormal", false);
+            }
+
             if (speed > 1)
             {
-                speed -= speed * (poid * 2) / 100;
+                speed -= speed * (poid * 3) / 200;
                 moveScript.setSpeed(speed);
             }
             else moveScript.setSpeed(1);

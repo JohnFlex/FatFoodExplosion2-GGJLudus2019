@@ -12,20 +12,34 @@ public class Move : MonoBehaviour
      */
     //The default speed for a sprite
     Vector2 StorageInput;
-    public float speed = 100f;
+    public float speed = 4f;
     //Object that changes position depending on input
     public GameObject ObjectToChangePosition;
     public Rigidbody2D RB;
+    private Animator animator;
 
     private void Awake()
     {
         RB = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
     {
         //Changing the position on changing axes
          StorageInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        if(Input.GetAxis("Vertical") <= 0)
+        {
+            animator.SetBool("isFace", true);
+            animator.SetBool("isBack", false);
+        }
+
+        if (Input.GetAxis("Vertical") > 0)
+        {
+            animator.SetBool("isFace", false);
+            animator.SetBool("isBack", true);
+        }
         
         //this.transform.position = (this.transform.position) + (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed * Time.deltaTime);
 
@@ -41,7 +55,7 @@ public class Move : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        RB.AddForce(StorageInput * 3, ForceMode2D.Impulse);
+        RB.AddForce(StorageInput * speed, ForceMode2D.Impulse);
     }
 
     public void setSpeed(float sped)
