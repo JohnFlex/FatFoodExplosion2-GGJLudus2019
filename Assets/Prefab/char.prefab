@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1445333131}
   - component: {fileID: 1445333133}
   - component: {fileID: 1445333134}
+  - component: {fileID: 1362843150}
   m_Layer: 0
   m_Name: char
   m_TagString: Player
@@ -162,9 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41e00e20efca5b4eb0e9c755344b744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 4
   tagToDetect: bouf
-  uiPoid: {fileID: 0}
   moveScript: {fileID: 1445333134}
 --- !u!114 &1445333134
 MonoBehaviour:
@@ -181,3 +181,17 @@ MonoBehaviour:
   speed: 4
   ObjectToChangePosition: {fileID: 0}
   RB: {fileID: 1445333132}
+--- !u!114 &1362843150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4899240475056503613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f59029a9674c5e40a694bffff194cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceDash: 2
+  DirectionDash: {fileID: 0}
