@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class charBehaviour : MonoBehaviour
 {
     //vitesse du personnage par default
+    public Text uiPoid;
     public float speed;
     //public float initSpeed;
     //tag des éléments bouf à détecter
@@ -52,7 +53,7 @@ public class charBehaviour : MonoBehaviour
         if(collision.gameObject.tag == "bouf")
         {
             poid++;
-            //uiPoid.text = poid.ToString();
+            uiPoid.text = poid.ToString();
 
             if(poid > 10)
             {
