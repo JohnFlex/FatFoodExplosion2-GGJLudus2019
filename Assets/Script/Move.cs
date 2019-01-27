@@ -11,21 +11,37 @@ public class Move : MonoBehaviour
      * 
      */
     //The default speed for a sprite
+    Vector2 StorageInput;
     public float speed = 100f;
     //Object that changes position depending on input
     public GameObject ObjectToChangePosition;
+    public Rigidbody2D RB;
 
+    private void Awake()
+    {
+        RB = GetComponent<Rigidbody2D>();
+    }
     // Update is called once per frame
     void Update()
     {
         //Changing the position on changing axes
-        this.transform.position =(this.transform.position) + (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0) * speed * Time.deltaTime);
+         StorageInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        
+        //this.transform.position = (this.transform.position) + (new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0) * speed * Time.deltaTime);
+
         //Changing the position of the object
-        if (Input.GetAxis("Horizontal") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.right*2;
-        if (Input.GetAxis("Horizontal") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.left * 2;
-        if (Input.GetAxis("Vertical") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.up * 2;
-        if (Input.GetAxis("Vertical") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.down * 2;
-        if ((Input.GetAxis("Vertical") == 0) && (Input.GetAxis("Horizontal") == 0)) ObjectToChangePosition.transform.localPosition = Vector3.zero;
+       // if (Input.GetAxis("Horizontal") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.right*2;
+       // if (Input.GetAxis("Horizontal") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.left * 2;
+       // if (Input.GetAxis("Vertical") > 0.1f) ObjectToChangePosition.transform.localPosition = Vector3.up * 2;
+       // if (Input.GetAxis("Vertical") < -0.1f) ObjectToChangePosition.transform.localPosition = Vector3.down * 2;
+       // if ((Input.GetAxis("Vertical") == 0) && (Input.GetAxis("Horizontal") == 0)) ObjectToChangePosition.transform.localPosition = Vector3.zero;
+
+
+        ObjectToChangePosition.transform.localPosition = RB.velocity*0.8f;
+    }
+    private void FixedUpdate()
+    {
+        RB.AddForce(StorageInput * 3, ForceMode2D.Impulse);
     }
 
     public void setSpeed(float sped)
