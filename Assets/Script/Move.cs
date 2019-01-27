@@ -12,7 +12,7 @@ public class Move : MonoBehaviour
      */
     //The default speed for a sprite
     Vector2 StorageInput;
-    public float speed = 100f;
+    public float speed = 4f;
     //Object that changes position depending on input
     public GameObject ObjectToChangePosition;
     public Rigidbody2D RB;
@@ -41,7 +41,7 @@ public class Move : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        RB.AddForce(StorageInput * 3, ForceMode2D.Impulse);
+        RB.AddForce(StorageInput * speed, ForceMode2D.Impulse);
     }
 
     public void setSpeed(float sped)

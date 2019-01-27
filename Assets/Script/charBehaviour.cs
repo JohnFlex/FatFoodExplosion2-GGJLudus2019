@@ -47,14 +47,14 @@ public class charBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //si l'objet détecté a le bon tag
-        if(collision.gameObject.tag == tagToDetect)
+        if(collision.gameObject.tag == "bouf")
         {
             poid++;
             uiPoid.text = poid.ToString();
             
             if (speed > 1)
             {
-                speed -= speed * (poid * 2) / 100;
+                speed -= speed * (poid * 3) / 200;
                 moveScript.setSpeed(speed);
             }
             else moveScript.setSpeed(1);
