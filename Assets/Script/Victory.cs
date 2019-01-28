@@ -18,7 +18,8 @@ public class Victory : MonoBehaviour
 
     void Update()
     {
-        if(charScript.poid == ennemies)
+        
+        if(charScript.poid >= ennemies && timer.timing >= 0)
         {
             timer.SendMessage("win");
         }

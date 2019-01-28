@@ -105,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300104, guid: e8475a5f069af234a922ab29452022cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -195,7 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41e00e20efca5b4eb0e9c755344b744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  uiPoid: {fileID: 0}
+  speed: 6
   tagToDetect: bouf
   moveScript: {fileID: 1445333134}
 --- !u!114 &1445333134
@@ -210,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d684aa5bf217a40aa755dbaf840e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 6
   ObjectToChangePosition: {fileID: 2783394626875536568}
   RB: {fileID: 1445333132}
 --- !u!114 &4780005191798723122

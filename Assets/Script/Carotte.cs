@@ -63,7 +63,7 @@ public class Carotte : MonoBehaviour
 
     private void Explosion()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < Random.Range(2,5); i++)
         {
             GameObject TempBouf = GameObject.Instantiate(Bouf, transform.position, transform.rotation);
             TempBouf.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-5f, 5f), (Random.Range(-5f, 5f))),ForceMode2D.Impulse);    
