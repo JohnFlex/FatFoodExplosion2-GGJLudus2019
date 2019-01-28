@@ -23,10 +23,10 @@ public class Dash : MonoBehaviour {
         {
             for (int i = 0; i < forceDash*2; i++)
             {
-                GetComponent<Rigidbody2D>().AddForce((DirectionDash.transform.position - this.GetComponentInParent<Transform>().transform.position) * forceDash, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce((DirectionDash.transform.position - this.GetComponentInParent<Transform>().transform.position) * forceDash * (GetComponent<charBehaviour>().poid/2), ForceMode2D.Impulse);
 
             }
-            GetComponent<Rigidbody2D>().AddForce((DirectionDash.transform.position-this.GetComponentInParent<Transform>().transform.position) * forceDash, ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddForce((DirectionDash.transform.position-this.GetComponentInParent<Transform>().transform.position) * forceDash*(GetComponent<charBehaviour>().poid/2), ForceMode2D.Impulse);
             CanDash = false;
             TimerBeforeRedash = 5f;
         }
