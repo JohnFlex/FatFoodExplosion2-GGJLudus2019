@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed560af4d9dbaf843b3e7054f144ea7d, type: 3}
-  m_Name: Ulb
+  m_Name: ACTournai
   m_EditorClassIdentifier: 
-  Nom: "Ulb - Section M\xE9decine"
-  Lieu: Bruxelles
+  Nom: 
+  Lieu: 
   Description: 
-  DateJPO: 29/05
-  NombreDePresentateurs: 5
+  DateJPO: 
+  Modalites: 
+  PageInscription: 
+  NombreDePresentateurs: 0

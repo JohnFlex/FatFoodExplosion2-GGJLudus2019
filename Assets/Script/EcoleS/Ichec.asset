@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed560af4d9dbaf843b3e7054f144ea7d, type: 3}
+  m_Name: Ichec
+  m_EditorClassIdentifier: 
+  Nom: ICHEC
+  Lieu: 'L''Ichec a 3 campus, dont 2 a Bruxelles (Montgomery et Bois de la Cambre)
+
+
+    
+
+    Voulez-vous
+    savoir autre chose ?
+
+'
+  Description: "En plus de s'occuper du marketing, l'Ichec donne \xE9galement des
+    formations de management et de comptabilit\xE9s\n\n\r\nVoulez-vous savoir autre
+    chose ?\r\n"
+  DateJPO: 
+  Modalites: "Le minerval est de 1600\u20AC \xE0 payer en une fois. Il n'y a pas
+    d'autres conditions d'entr\xE9es pour la section marketing\n\n\r\nVoulez-vous
+    que je vous redirige vers la page d\u2019inscription ?\r"
+  PageInscription: 
+  NombreDePresentateurs: 0

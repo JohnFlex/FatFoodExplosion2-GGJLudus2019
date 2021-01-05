@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed560af4d9dbaf843b3e7054f144ea7d, type: 3}
+  m_Name: Ludus
+  m_EditorClassIdentifier: 
+  Nom: Ludus Academie
+  Lieu: "Ludus Academie est sit\xE9e \xE0 l\u2019H\xF4tel des Douanes sur le site
+    de Tour & Taxis, \xE0 Bruxelles, en Belgique. Son adresse est \xAB\_Rue Picard
+    3, 1000 Bruxelles\_\xBB\r\n\r\nVoulez-vous savoir autre chose ?\r\n"
+  Description: "Et bien Ludus Acad\xE9mie est la Haute Ecole Europ\xE9enne o\xF9
+    l\u2019on apprends toutes les facettes de l\u2019informatique et du Game Design.
+    Fond\xE9e en 2012, elle compte quelques centaines d\u2019\xE9tudiants dipl\xF4m\xE9s
+    et travaillant dans de grandes entreprises, comme Ubisoft ou Deloitte. Voulez-vous
+    savoir autre chose ?\r\n"
+  DateJPO: 
+  Modalites: "Vous n\u2019avez besoin d\u2019aucun pr\xE9requis pour vous inscrire.
+    Vous devrez passer un simple entretien pour vous assurer qu\u2019il s\u2019agit
+    bien de ce que vous voulez faire . Le montant du minerval est de 4920 \u20AC
+    par an, payable mensuellement ou trimestriellement.\r\n\r\nVoulez-vous que je
+    vous redirige vers la page d\u2019inscription ?\r"
+  PageInscription: http://ludus-academie.fr/inscriptions/
+  NombreDePresentateurs: 0

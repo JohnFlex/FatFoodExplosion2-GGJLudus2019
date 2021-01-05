@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed560af4d9dbaf843b3e7054f144ea7d, type: 3}
-  m_Name: Ucl
+  m_Name: Ephec
   m_EditorClassIdentifier: 
-  Nom: Ucl - Section chirurgicale
-  Lieu: "Alma \xE0 Bruxelles"
-  Description: Nous somme bien meilleurs que l'ULB
-  DateJPO: "30 f\xE9vrier"
-  NombreDePresentateurs: 84
+  Nom: 
+  Lieu: 
+  Description: 
+  DateJPO: 
+  Modalites: 
+  PageInscription: 
+  NombreDePresentateurs: 0

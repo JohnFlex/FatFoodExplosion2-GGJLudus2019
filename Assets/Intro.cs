@@ -19,8 +19,8 @@ public class Intro : MonoBehaviour
     void TheAfter()
     {
         tmp1 = tmp2;
-        coroutine = StartCoroutine(ShowDialog("Pour vous déplacer, utilisez les flèches du clavier. Visitez le salon, découvrez votre vocation... et celle du salon ! Marchez sur un tapis devant un stand pour commencer interagir avec les personnes qui s'y trouvent"));
-        Invoke("CloseTab", 8f);
+        coroutine = StartCoroutine(ShowDialog("Commencez par utiliser les flèches pour vous déplacer"));
+        Invoke("CloseTab", 3f);
     }
 
     /// <summary>

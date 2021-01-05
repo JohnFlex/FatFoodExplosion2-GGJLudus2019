@@ -8,10 +8,13 @@ public class EcoleScriptableObject : ScriptableObject
 {
     
     public string Nom;
+    [TextArea(3,10)]
     public string Lieu;
-    public object Brochure;
-    [TextArea]
+    [TextArea(3, 10)]
     public string Description;
     public string DateJPO;
+    [TextArea(3, 10)]
+    public string Modalites;
+    public string PageInscription;
     public int NombreDePresentateurs;
 }
